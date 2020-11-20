@@ -1,0 +1,135 @@
+body {
+  font-family: roboto, sans-serif;
+  margin: 0;
+  background: #1e1e22;
+  color: #e3e3ff;
+}
+
+main {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main div button:nth-child(2):before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 1.5px solid #0077ff;
+  -webkit-animation: grow 1.2s ease-in-out infinite;
+          animation: grow 1.2s ease-in-out infinite;
+}
+
+button {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid #0077ff;
+  background: #92c5ff;
+  outline: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+textarea {
+  width: 80%;
+  max-width: 800px;
+  min-width: 300px;
+  height: 60%;
+  max-height: 500px;
+  min-height: 300px;
+  border-radius: 5px;
+  background: #f3f3ff;
+  border: none;
+  outline: none;
+  color: #1e1e22;
+  padding: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+textarea:focus {
+  border: 2px solid #0077ff;
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.action__container {
+  position: fixed;
+  background: #92c5ff;
+  color: #1e1e22;
+  left: 35%;
+  height: 50px;
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #0077ff;
+  border-radius: 10px;
+  font-size: 20px;
+  opacity: 0;
+  top: -100px;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+@media (min-width: 600px) {
+  textarea::-webkit-scrollbar {
+    width: 7px;
+  }
+  textarea::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  textarea::-webkit-scrollbar-thumb {
+    background: #92c5ff;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
